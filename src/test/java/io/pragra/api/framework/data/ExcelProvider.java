@@ -1,6 +1,6 @@
-package ca.freedommobile.api.framework.data;
+package io.pragra.api.framework.data;
 
-import ca.freedommobile.api.framework.config.Config;
+import io.pragra.api.framework.config.Config;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;

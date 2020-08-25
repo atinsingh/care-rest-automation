@@ -1,4 +1,4 @@
-package ca.freedommobile.api.framework.domain.request;
+package io.pragra.api.framework.domain.request;
 
 /**
  * @project api-framework

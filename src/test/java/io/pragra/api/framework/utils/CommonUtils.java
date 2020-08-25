@@ -1,4 +1,4 @@
-package ca.freedommobile.api.framework.utils;
+package io.pragra.api.framework.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;

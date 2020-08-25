@@ -1,11 +1,10 @@
-package ca.freedommobile.api.framework.apis;
+package io.pragra.api.framework.apis;
 
-import ca.freedommobile.api.framework.config.Config;
+import io.pragra.api.framework.config.Config;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.apache.http.client.methods.RequestBuilder;
 
 
 import java.util.Map;
@@ -15,7 +14,7 @@ public class APIManger {
     private static APIManger apiManger;
 
     private APIManger() {
-        RestAssured.basePath = Config.getProperty("host");
+        RestAssured.baseURI = Config.getProperty("host");
     }
 
     public Response doGet(String path, Map<String, Object> pathParams, Map<String, Object> queryParams){
@@ -23,11 +22,15 @@ public class APIManger {
         specBuilder.setContentType(ContentType.JSON);
 
         if(null!=pathParams){
-            pathParams.forEach(specBuilder::addPathParam);
+            pathParams.forEach((k,v)->{
+                System.out.println("Path Param " + k);
+                specBuilder.addPathParam(k, v);
+            });
         }
         if(null!=queryParams){
             queryParams.forEach(specBuilder::addQueryParam);
         }
+        System.out.println(pathParams);
         return RestAssured.given(specBuilder.build()).contentType(ContentType.JSON).get(path);
     }
 
@@ -71,12 +74,11 @@ public class APIManger {
         return RestAssured.given(specBuilder.build()).contentType(ContentType.JSON).delete(path);
      }
 
-    public static APIManger getInstance(){
-        synchronized (apiManger){
+    public synchronized static APIManger getInstance(){
+
             if(apiManger==null){
                 apiManger = new APIManger();
             }
-        }
         return apiManger;
     }
 }

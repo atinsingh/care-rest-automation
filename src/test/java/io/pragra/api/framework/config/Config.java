@@ -1,4 +1,4 @@
-package ca.freedommobile.api.framework.config;
+package io.pragra.api.framework.config;
 
 import org.yaml.snakeyaml.Yaml;
 

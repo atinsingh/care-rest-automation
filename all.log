@@ -1,0 +1,10 @@
+2020-08-25 11:48:49.287 [main] INFO  io.pragra.api.framework.reports.HTMLReport - Opening Logfile target/reports/report202008251148284.html 
+2020-08-25 11:48:49.365 [main] INFO  io.pragra.api.framework.testcases.GetAccountInfoTest - Got following courseId 100112
+2020-08-25 11:48:49.404 [main] INFO  io.pragra.api.framework.testcases.GetAccountInfoTest - Making call to URL /api/course-info/{id} with param 100112
+2020-08-25 11:48:50.079 [main] INFO  io.pragra.api.framework.testcases.GetAccountInfoTest - Status code to be matched from Scenario-  400
+2020-08-25 11:48:50.476 [main] INFO  io.pragra.api.framework.testcases.GetAccountInfoTest - Got following courseId 5f0b1d8216b5b97e87391483
+2020-08-25 11:48:50.476 [main] INFO  io.pragra.api.framework.testcases.GetAccountInfoTest - Making call to URL /api/course-info/{id} with param 5f0b1d8216b5b97e87391483
+2020-08-25 11:48:50.831 [main] INFO  io.pragra.api.framework.testcases.GetAccountInfoTest - Status code to be matched from Scenario-  200
+2020-08-25 11:48:50.869 [main] INFO  io.pragra.api.framework.testcases.GetAccountInfoTest - Got following courseId 5f0b3da979202c7fd738a7ee
+2020-08-25 11:48:50.869 [main] INFO  io.pragra.api.framework.testcases.GetAccountInfoTest - Making call to URL /api/course-info/{id} with param 5f0b3da979202c7fd738a7ee
+2020-08-25 11:48:50.924 [main] INFO  io.pragra.api.framework.testcases.GetAccountInfoTest - Status code to be matched from Scenario-  200

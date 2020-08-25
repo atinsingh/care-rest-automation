@@ -1,6 +1,6 @@
-package ca.freedommobile.api.framework.reports;
+package io.pragra.api.framework.reports;
 
-import ca.freedommobile.api.framework.utils.CommonUtils;
+import io.pragra.api.framework.utils.CommonUtils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.apache.logging.log4j.Level;
@@ -20,7 +20,7 @@ public class HTMLReport {
     private Logger logger = LogManager.getLogger(HTMLReport.class);
 
     private HTMLReport(){
-        logger.log(Level.INFO,"Opening Logfile {} ",CommonUtils.getReportFileName() );
+        logger.log(Level.INFO,"Opening Logfile {} ", CommonUtils.getReportFileName() );
         htmlReporter = new ExtentHtmlReporter(CommonUtils.getReportFileName());
         reports = new ExtentReports();
         reports.attachReporter(htmlReporter);
